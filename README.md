@@ -11,4 +11,4 @@ The purpose of this project is to build an html table using thymeleaf and bootst
     ThymeleafdemoApplication.java
 
 ###  To access the webpage
-- Go to http://localhost:8080/employees/list
+- Go to http://localhost:8080
