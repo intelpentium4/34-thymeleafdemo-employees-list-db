@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" xml:th="http://www.thymeleaf.org>"
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<!-- Required meta tags -->
@@ -11,6 +11,7 @@
 	
 	<title>Add Employee form</title>
 </head>
+	
 
 <body>
 	<div class="container">
@@ -18,7 +19,7 @@
 		<hr>
 		<p class="h4 mb-4">Save Employee</p>
 		<form action="#" th:action="@{/employees/save}"
-							th:action="${employee}" method="POST">
+							th:object="${employee}" method="POST">
 			<input type="text" th:field="*{firstName}"
 				class="form-control mb-4 col-4" placeholder="First name goes here">
 			<input type="text" th:field="*{lastName}"
@@ -27,6 +28,8 @@
 				class="form-control mb-4 col-4" placeholder="Email Address goes here">
 			<button type="submit" class="btn btn-info col-2">Save</button>
 		</form>
+		<hr>
+		<a th:href="@{/employees/list}">Back to Employees List</a>
 	</div>
 </body>
 
